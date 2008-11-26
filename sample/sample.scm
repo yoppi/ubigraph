@@ -19,5 +19,8 @@
         (d e)
         (handler e))
       (lambda ()
-        (print (call client "ubigraph.remove_vertex" 1)
-               (call client "ubigraph.remove_vertex" 2))))))
+        (print 
+          (call client "ubigraph.new_vertex" )
+               ;(call client "ubigraph.new_vertex_w_id" 2)
+               ;(call client "ubigraph.new_edge" 1 2)
+               )))))
