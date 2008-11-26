@@ -111,6 +111,12 @@
       (call server "ubigraph.new_edge" from to)
       (call server "Ubigraph.new_edge_w_id" id from to))))
 
+(define (remove-edge id server)
+  (call server "ubigraph.remove_edge" id))
+
+(define (set-attribute-edge id att value server)
+  (call server "ubigraph.set_edge_attribute" id att value))
+
 
 ;;==================== Ubigraph Client
 (define-class <ubigraph-client> ()
