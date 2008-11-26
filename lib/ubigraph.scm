@@ -55,6 +55,36 @@
       (call server "ubigraph.new_vertex")
       (call server "Ubigraph.new_vertex_w_id" id))))
 
+(define (remove-vertex id server)
+  (call server "ubigraph.remove_vertex" id))
+
+(define (set-attribute-vertex id att value server)
+  (call server "ubigraph.set_vertex_attribute" id att value))
+
+(define (set-color-vertex id color server)
+  (set-attribute-vertex id "color" color server))
+
+(define (set-shape-vertex id shape server)
+  (set-attribute-vertex id "shape" shape server))
+
+(define (set-shapedetail-vertex id detail server)
+  (set-attribute-vertex id "shapedetail" detail server))
+
+(define (set-label-vertex id label server)
+  (set-attribute-vertex id "label" label server))
+
+(define (set-labelpos-vertex id pos server)
+  (set-attribute-vertex id "labelpos" pos server))
+
+(define (set-size-vertex id size server)
+  (set-attribute-vertex id "size" size server))
+
+(define (set-fontfamily-vertex id family server)
+  (set-attribute-vertex id "fontfamily" family server))
+
+(define (set-fontsize-vertex id size server)
+  (set-attribute-vertex id "fontsize" size server))
+
 ;(define-method draw-vertex ((self <vertex>) server)
 ;  (call server ))
 
