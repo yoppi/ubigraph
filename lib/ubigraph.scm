@@ -117,6 +117,36 @@
 (define (set-attribute-edge id att value server)
   (call server "ubigraph.set_edge_attribute" id att value))
 
+(define (set-color-edge id c server)
+  (set-attribute-edge id "color" c server))
+
+(define (set-label-edge id pos server)
+  (set-attribute-edge id "labelpos" pos server))
+
+(define (set-fontcolor-edge id fontc server)
+  (set-attribute-edge id "fontcolor" fontc server))
+
+(define (set-fontfamily-edge id family server)
+  (set-attribute-edge id "fontfamily" family server))
+
+(define (set-fontsize-edge id size server)
+  (set-attribute-edge id "fontsize" size server))
+
+(define (set-strength-edge id s server)
+  (set-attribute-edge id "strength" s server))
+
+(define (set-orientationweight-edge id o server)
+  (set-attribute-edge id "orientationweight" o server))
+
+(define (set-width-edge id width server)
+  (set-attribute-edge id "width" width server))
+
+(define (set-arrow-edge id arrow server)
+  (set-attribute-edge id "arrow" arrow server))
+
+(define (set-showstrain-edge id s server)
+  (set-attribute-edge id "showstrain" s server))
+
 
 ;;==================== Ubigraph Client
 (define-class <ubigraph-client> ()
