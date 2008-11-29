@@ -107,7 +107,7 @@
 ;      (make-edge-with-id id)
 ;      (make-edge))))
 
-(define (make-edge from to . args)
+(define (make-edge from to server . args)
   (let-optionals* args ((id #f))
     (if (eq? id #f)
       (call server "ubigraph.new_edge" from to)
