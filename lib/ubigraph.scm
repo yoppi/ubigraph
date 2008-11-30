@@ -146,8 +146,21 @@
 (define (set-arrow-edge id arrow server)
   (set-attribute-edge id "arrow" arrow server))
 
+(define (set-arrowreverse-edge id a server)
+  (set-attribute-edge id "arrow_reverse" a server))
+
+(define (set-arrowlength-edge id a server)
+  (set-attribute-edge id "arrow_length" a server))
+
+(define (set-arrowradius id a server)
+  (set-attribute-edge id "arrow_radius" a server))
+
+(define (set-arrowposition id a server)
+  (set-attribute-edge id "arrow_position" a server))
+
 (define (set-showstrain-edge id s server)
   (set-attribute-edge id "showstrain" s server))
+
 
 
 ;;==================== Ubigraph Client
