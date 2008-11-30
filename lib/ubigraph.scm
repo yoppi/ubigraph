@@ -90,12 +90,6 @@
 (define (set-fontsize-vertex id size server)
   (set-attribute-vertex id "fontsize" size server))
 
-(define (set-visible-vertex v server)
-  (set-style-vertex "visible" v server))
-
-;(define-method draw-vertex ((self <vertex>) server)
-;  (call server ))
-
 
 ;;==================== Edge between Vertexes
 ;(define-class <edge> ()
@@ -169,9 +163,6 @@
 
 (define (set-showstrain-edge id s server)
   (set-attribute-edge id "showstrain" s server))
-
-(define (set-visible-edge v server)
-  (set-style-edge "visible" v server))
 
 
 ;;==================== Ubigraph Client
