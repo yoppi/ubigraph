@@ -152,10 +152,10 @@
 (define (set-arrowlength-edge id a server)
   (set-attribute-edge id "arrow_length" a server))
 
-(define (set-arrowradius id a server)
+(define (set-arrowradius-edge id a server)
   (set-attribute-edge id "arrow_radius" a server))
 
-(define (set-arrowposition id a server)
+(define (set-arrowposition-edge id a server)
   (set-attribute-edge id "arrow_position" a server))
 
 (define (set-showstrain-edge id s server)
