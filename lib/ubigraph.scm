@@ -90,8 +90,8 @@
 (define (set-fontsize-vertex id size server)
   (set-attribute-vertex id "fontsize" size server))
 
-(define (set-visible-vertex id v server)
-  (set-attribute-vertex id "visible" v server))
+(define (set-visible-vertex v server)
+  (set-style-vertex "visible" v server))
 
 ;(define-method draw-vertex ((self <vertex>) server)
 ;  (call server ))
@@ -124,6 +124,9 @@
 
 (define (set-attribute-edge id att value server)
   (call server "ubigraph.set_edge_attribute" id att value))
+
+(define (set-style-edge att value server)
+  (call server "ubigraph.set_edge_style_attribute" 0 att value))
 
 (define (set-color-edge id c server)
   (set-attribute-edge id "color" c server))
@@ -167,8 +170,8 @@
 (define (set-showstrain-edge id s server)
   (set-attribute-edge id "showstrain" s server))
 
-(define (set-visible-edge id v server)
-  (set-attribute-edge id "visible" v server))
+(define (set-visible-edge v server)
+  (set-style-edge "visible" v server))
 
 
 ;;==================== Ubigraph Client
