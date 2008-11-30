@@ -52,7 +52,7 @@
   (let-optionals* args ((id #f))
     (if (eq? id #f)
       (call server "ubigraph.new_vertex")
-      (call server "Ubigraph.new_vertex_w_id" id))))
+      (call server "ubigraph.new_vertex_w_id" id))))
 
 (define (remove-vertex id server)
   (call server "ubigraph.remove_vertex" id))
@@ -111,7 +111,7 @@
   (let-optionals* args ((id #f))
     (if (eq? id #f)
       (call server "ubigraph.new_edge" from to)
-      (call server "Ubigraph.new_edge_w_id" id from to))))
+      (call server "ubigraph.new_edge_w_id" id from to))))
 
 (define (remove-edge id server)
   (call server "ubigraph.remove_edge" id))
