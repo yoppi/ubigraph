@@ -5,7 +5,7 @@
 (use ubigraph)
 
 (define *server* (init-ubigraph))
-(define *dim* 7) ; Number of dimensions for hypercube
+(define *dim* 6) ; Number of dimensions for hypercube
 (define *r* (expt 2 *dim*))
 
 (clear *server*)
