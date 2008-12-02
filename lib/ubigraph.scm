@@ -25,7 +25,7 @@
   (use srfi-1)
   (use rfc.uri)
   (use xsm.xml-rpc.client) ;to use XML-RPC
-  (export *ubigraph-version* make-vertex make-edge make-ubigraph-client remove-vertex remove-edge set-color-vertex set-shape-vertex set-shapedetail-vertex set-label-vertex set-labelpos-vertex set-size-vertex set-fontcolor-vertex set-fontfamily-vertex set-fontsize-vertex set-visible-vertex set-style-vertex set-attribute-edge set-color-edge set-label-edge set-fontcolor-edge set-fontfamily-edge set-fontsize-edge set-strength-edge  set-orientationweight-edge set-width-edge set-arrow-edge set-arrowreverse-edge set-arrowlength-edge set-arrowradius-edge set-arrowposition-edge set-showstrain-edge set-visible-edge set-style-edge init-ubigraph clear call))
+  (export *ubigraph-version* make-vertex make-edge make-ubigraph-client remove-vertex remove-edge set-color-vertex set-shape-vertex set-shapedetail-vertex set-label-vertex set-labelpos-vertex set-size-vertex set-fontcolor-vertex set-fontfamily-vertex set-fontsize-vertex set-visible-vertex set-style-vertex set-attribute-edge set-color-edge set-label-edge set-fontcolor-edge set-fontfamily-edge set-fontsize-edge set-strength-edge  set-orientationweight-edge set-width-edge set-arrow-edge set-arrowreverse-edge set-arrowlength-edge set-arrowradius-edge set-arrowposition-edge set-showstrain-edge set-visible-edge set-style-edge set-stroke-edge init-ubigraph clear call))
 (select-module ubigraph)
 
 (define *ubigraph-version* "0.0.1")
@@ -166,6 +166,9 @@
 
 (define (set-showstrain-edge id s server)
   (set-attribute-edge id "showstrain" s server))
+
+(define (set-stroke-edge id s server)
+  (set-attribute-edge id "stroke" s server))
 
 (define (set-visible-edge v server)
   (set-style-edge "visible" v server))
