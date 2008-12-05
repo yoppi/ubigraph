@@ -39,8 +39,29 @@
   (for-each (lambda (r)
               (enqueue! *tasks* r)) rs))
 
-(define ())
+
+(define *val* #f)
+
+(define-coroutine (printer yield)
+  (let ((parent #f))
+    (define (loop)
+      (make-verex *val* *server*)
+      (when (not parent)
+        (make-edge parent *val* *server*))
+      (set! parent *val*)
+      (yield))
+    (loop)))
+
+(define-coroutine (evaluator yield)
+  (define (loop)
+    (for-each (lambda (i)
+                (set! *val* i)
+                (sys-sleep 1)
+                (yield)) (iota 100 0)))
+  (loop))
+
 
 ;;========== Main
 (define (main args)
-  ())
+  (coroutine-init! printer)
+  (evaluator))
