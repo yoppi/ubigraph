@@ -1,0 +1,35 @@
+* ubigraph
+  ubigraph is a gauche library wrap for Ubigraph 
+  (http://www.ubietylab.net/ubigraph).
+
+* Functionality
+  ubigraph provide a shortcut to plot, draw some graphs (by calling XML-RPC
+  internally).
+
+* Requirement
+  - Ubigraph.
+      http://www.ubietylab.net/ubigraph
+  - XSM. This is gauche XML-RPC library. It is developed by Kohei Sutou and
+    fixed by yoppi.
+      http://http://github.com/yoppi/xsm/tree/master
+
+* Install
+  To easily install use insall script written in Gauche.
+    % gosh install/install.scm
+
+* Usage
+  First, you must run the Ubigraph Server before drowing a graph with
+  ubigraph. Here's a simple sample code. This code draw two vertex with a
+  edge.
+
+      (use ubigraph)
+      (define *server* (init-ubigraph))
+      
+      (define v1 (make-vertex *server*))
+      (define v2 (make-vertex *server*))
+      (define e12 (make-edge v1 v2 *server*))
+
+  More? Please see sample codes.
+
+* Copyright and licensing:
+  ubigraph is Copyright (c) 2008-2009 yoppi and under the MIT License.
