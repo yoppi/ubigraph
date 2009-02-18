@@ -1,5 +1,5 @@
 * ubigraph
-  ubigraph is a gauche library wrap for Ubigraph 
+  ubigraph is a Gauche library wrap for Ubigraph 
   (http://www.ubietylab.net/ubigraph).
 
 * Functionality
@@ -9,9 +9,9 @@
 * Requirement
   - Ubigraph.
       http://www.ubietylab.net/ubigraph
-  - XSM. This is gauche XML-RPC library. It is developed by Kohei Sutou and
+  - XSM. This is Gauche XML-RPC library. It is developed by Kohei Sutou and
     fixed by yoppi.
-      http://http://github.com/yoppi/xsm/tree/master
+      http://github.com/yoppi/xsm/tree/master
 
 * Install
   To easily install use insall script written in Gauche.
